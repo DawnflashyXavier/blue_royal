@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Royals International</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="quick-contact">
+      <h6>
+        For Enquires. Email:<a href="mailto:info@blueroyalint.com"
+          >info@blueroyalint.com</a>
+        Phone:<a href="tel:+234 803 123 4567">+234 803 123 4567</a> or
+        <a href="tel:+234 803 765 4321">+234 803 765 4321</a>
+      </h6>
+    </div>
+    <!-- nav -->
+    <nav class="navbar">
+      <a href="#" class="brand">
+        <img src="images/mlogo.png" alt="Blue Royal Int. Logo" />
+        <span>Blue Royals International School</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Events</a></li>
+        <li><a href="#contact">Admissions</a></li>
+        <li><a href="#" class="btn-nav">Apply Now</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div
+          class="slide active"
+          style="background-image: url(&quot;images/logo2.png&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;images/students.png&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;images/football.png&quot;)"
+        ></div>
+      </div>
+
+      <div class="hero-content">
+        <h1>Welcome to <span>Blue Royals International School</span></h1>
+        <p>
+          Raising future leaders with excellence, character, and innovation.
+          From Nursery to Senior Secondary, we nurture minds to rule with
+          wisdom.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary">Admissions Open</a>
+          <a href="#" class="btn-secondary">Explore Programs</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <h3>20+</h3>
+            <p>Years</p>
+          </div>
+          <div>
+            <h3>1500+</h3>
+            <p>Students</p>
+          </div>
+          <div>
+            <h3>100%</h3>
+            <p>WAEC Pass</p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="hero-dots" id="heroDots"></div>
+        <button class="hero-prev" id="heroPrev">&#10094;</button>
+        <button class="hero-next" id="heroNext">&#10095;</button>
+      </div>
+    </section>
+    <section class="message" id="principal">
+      <div class="message-container">
+        <div class="speech">
+          <h3>Message from the Principal</h3>
+          <p>
+            Welcome to Blue Royals International School, where we are dedicated
+            to nurturing young minds and shaping future leaders. Our commitment
+            to excellence, character development, and innovation ensures that
+            every student receives a holistic education that prepares them for
+            success in an ever-changing world. Join us on this journey of growth
+            and discovery.
+          </p>
+          <div class="principal-signature">
+            <strong>Kadiri Victor, PhD</strong>
+            <span>Principal, Blue Royals International School</span>
+          </div>
+        </div>
+        <div class="principal-photo">
+          <img src="images/principal.png" alt="Dr. Kadiri Victor - Principal" />
+        </div>
+      </div>
+    </section>
+    <section class="explore" id="explore">
+      <h2>Our Facilities</h2>
+      <p>Discover what makes Blue Royals exceptional</p>
+
+      <div class="speed-controls">
+        <button id="reverseBtn"><i class="fa-solid fa-backward"></i></button>
+        <button id="slowBtn"><i class="fa-solid fa-arrows-spin"></i></button>
+        <button id="normalBtn" class="active">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="fastBtn"><i class="fa-solid fa-bolt"></i></button>
+      </div>
+
+      <div class="carousel-wrapper" id="carouselWrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+    </section>
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImg" src="" alt="" />
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <!-- <a href="#" class="btn-primary">Learn More</a> -->
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="aboutus">
+        <h3>About Us</h3>
+        <p>
+          Welcome to Blue Royals, where every child is royalty. We believe that
+          education goes beyond textbooks. It's about building character,
+          creativity, and confidence. Our team of dedicated educators is
+          committed to unlocking the unique potential in each student and
+          preparing them for a bright global future.
+        </p>
+      </div>
+
+      <div class="staff">
+        <!-- FIRST CARD - FEATURED -->
+        <div class="card2 featured">
+          <div class="image-wrapper">
+            <img src="images/principal1.png" alt="Principal" />
+          </div>
+          <h4>Kadiri Victor. <span>PhD</span></h4>
+          <p>Principal of Blue Royals International</p>
+        </div>
+
+        <!-- GRID CARDS -->
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/vicep.png" alt="" />
+          </div>
+          <h4>Mr. Patel Rohit <span>MsC, M.Ed</span></h4>
+          <p>Vice Principal Academics</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/receptionist2.png" alt="" />
+          </div>
+          <h4>Mrs.Stella Johnson <span>B.Ed</span></h4>
+          <p>Head of Secondary</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/pri.png" alt="" />
+          </div>
+          <h4>Mrs. Chioma Onyekwu<span>BSc</span></h4>
+          <p>Head of Primary</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/sportsd.png" alt="" />
+          </div>
+          <h4>Mr. Olatunji Michael <span>BSc</span></h4>
+          <p>Sports Director</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/art.png" alt="" />
+          </div>
+          <h4>Mrs. Olivia Martinez <span>BA</span></h4>
+          <p>Head of Arts</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/sci.png" alt="" />
+          </div>
+          <h4>Dr. Arjun Mehta <span>PhD</span></h4>
+          <p>Head of Sciences</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/ict.png" alt="" />
+          </div>
+          <h4>Mr. David Chen <span>B.Tech</span></h4>
+          <p>ICT Coordinator</p>
+        </div>
+
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/nur.png" alt="" />
+          </div>
+          <h4>Mrss. Aisha Bello <span>NCE</span></h4>
+          <p>Head of Nursery</p>
+        </div>
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/cso.png" alt="" />
+          </div>
+          <h4>Mr. Kayode Banks</h4>
+          <p>Chief Security Officer</p>
+        </div>
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/cafe.png" alt="" />
+          </div>
+          <h4>Mrs. Fatima Khan</h4>
+          <p>Chief Cook</p>
+        </div>
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/tech.png" alt="" />
+          </div>
+          <h4>Mr. Kunle Adeyemi</h4>
+          <p>Chief Technician</p>
+        </div>
+        <div class="card2">
+          <div class="image-wrapper">
+            <img src="images/clean.png" alt="" />
+          </div>
+          <h4>Mrs. Abimbola Oladipo</h4>
+          <p>Chief of Sanitation</p>
+        </div>
+      </div>
+    </section>
+    <section class="gallery" id="gallery">
+      <div class="gallery-header">
+        <h2>School Gallery</h2>
+        <p>Moments of excellence, learning, and royalty at Blue Royals</p>
+      </div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="academic">Academic</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+      </div>
+
+      <!-- GALLERY GRID -->
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="academic">
+          <img src="images/class.png" alt="Smart Classroom" />
+          <div class="overlay"><span>Smart Classrooms</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/f-field.png" alt="Football Field" />
+          <div class="overlay"><span>Football Championship</span></div>
+        </div>
+        <div class="gallery-item" data-category="academic">
+          <img src="images/students.png" alt="Student" />
+          <div class="overlay"><span>Our Students</span></div>
+        </div>
+        <div class="gallery-item" data-category="academic">
+          <img src="images/sci-lab.png" alt="Science Lab" />
+          <div class="overlay"><span>Science Lab</span></div>
+        </div>
+        <div class="gallery-item" data-category="academic">
+          <img src="images/teach3.png" alt="Teachers" />
+          <div class="overlay"><span>Teacher</span></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <img src="images/culture.png" alt="Cultural Day" />
+          <div class="overlay"><span>Cultural Day</span></div>
+        </div>
+        <div class="gallery-item" data-category="academic">
+          <img src="images/stu1.png" alt="Student" />
+          <div class="overlay"><span>Student Reading</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/Pool.png" alt="Swimming" />
+          <div class="overlay"><span>Swimming Gala</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/play.png" alt="Handball" />
+          <div class="overlay"><span>HandBall</span></div>
+        </div>
+        <div class="gallery-item" data-category="academic">
+          <img src="images/lib.png" alt="Library" />
+          <div class="overlay"><span>Digital Library</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/cheer.png" alt="Cheerleaders" />
+          <div class="overlay"><span>Our Wonderful Cheer Team</span></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <img src="images/grad.png" alt="Graduation" />
+          <div class="overlay"><span>Graduation 2025</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/jump.png" alt="High Jump" />
+          <div class="overlay"><span>High Jump</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/basket.png" alt="Basketball" />
+          <div class="overlay"><span>Basketball Match</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/swim.png" alt="Swim" />
+          <div class="overlay"><span>Swimming</span></div>
+        </div>
+        <div class="gallery-item" data-category="sports">
+          <img src="images/track.png" alt="Basketball" />
+          <div class="overlay"><span>Track</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+
+    <!-- CONTACT + ENROLMENT SECTION -->
+<section class="contact" id="contact">
+  <div class="contact-header">
+    <h2>Get In Touch</h2>
+    <p>Admissions are currently open for 2025/2026 Academic Session</p>
+  </div>
+
+  <div class="contact-container">
+    <!-- LEFT: ENROLMENT INFO -->
+    <div class="enrolment-box">
+      <h3><i class="fa-solid fa-graduation-cap"></i> Enrolment Details</h3>
+      <div class="enrol-item">
+        <h4>Admission Requirements</h4>
+        <ul>
+          <li>Completed Application Form</li>
+          <li>Last 2 Term Reports / Testimonials</li>
+          <li>Birth Certificate + 4 Passport Photographs</li>
+          <li>Entrance Examination + Interview</li>
+        </ul>
+      </div>
+      <div class="enrol-item">
+        <h4>Available Classes</h4>
+        <p>Nursery, Primary, JSS 1-3, SSS 1-3</p>
+      </div>
+      <div class="enrol-item">
+        <h4>School Hours</h4>
+        <p>Mon - Fri: 8:00AM - 3:30PM</p>
+      </div>
+      <a href="mailto:info@blueroyalint.com" class="btn-primary">Apply Now</a>
+    </div>
+
+    <!-- RIGHT: CONTACT FORM + INFO -->
+    <div class="contact-box">
+      <h3><i class="fa-solid fa-envelope"></i> Send Us A Message</h3>
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-secondary">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p><i class="fa-solid fa-location-dot"></i> 123 Royal Avenue, Ikeja, Lagos, Nigeria</p>
+        <p><i class="fa-solid fa-phone"></i> +234 803 123 4567, +234 803 765 4321</p>
+        <p><i class="fa-solid fa-envelope"></i> info@blueroyalint.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <img src="images/logo2.png" alt="Blue Royals Logo" class="footer-logo">
+      <p>Raising future leaders with excellence, character, and innovation.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#explore">Facilities</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Admissions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Academics</h4>
+      <ul>
+        <li><a href="#">Nursery School</a></li>
+        <li><a href="#">Primary School</a></li>
+        <li><a href="#">Junior Secondary</a></li>
+        <li><a href="#">Senior Secondary</a></li>
+        <li><a href="#">School Calendar</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p>123 Royal Avenue, Ikeja</p>
+      <p>Lagos, Nigeria</p>
+      <p>Email: info@blueroyalint.com</p>
+      <p>Phone: +234 803 123 4567</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Blue Royals International School. All Rights Reserved. | Designed with 💙</p>
+  </div>
+</footer>
+    <script src="script.js"></script>
+  </body>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active'); // for X animation
+  });
+
+  // Close menu when you click a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+</script>
+</html>
